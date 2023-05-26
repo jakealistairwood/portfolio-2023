@@ -64,18 +64,55 @@ body::before {
 }
 
 .btn {
+  background-color: transparent;
+  cursor: pointer;
+  color: black;
+  transition: background-color color 0.3s ease-in;
+}
+
+.btn:hover {
+  background-color: black;
+}
+
+.btn:hover span {
+  color: white;
+}
+
+.text-animate-wrapper {
   position: relative;
   text-transform: uppercase;
   overflow: hidden;
 }
 
-.btn .line {
+.text-animate-wrapper .line {
   position: absolute;
+  transition: transform 0.3s ease-in;
 }
 
-.btn .line--one {
+.text-animate-wrapper .width-placeholder {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.text-animate-wrapper .line--one {
   top: 0;
   left: 0;
+  transform: translateY(0);
+}
+
+.text-animate-wrapper .line--two {
+  transform: translateY(24px);
+}
+
+.btn:hover .line--one,
+.text-animate-wrapper:hover .line--one {
+  transform: translateY(-24px);
+}
+
+.btn:hover .line--two,
+.text-animate-wrapper:hover .line--two {
+  transform: translateY(0);
+  text-decoration: underline;
 }
 
 .hero-icon {
