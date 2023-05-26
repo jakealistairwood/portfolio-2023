@@ -1,0 +1,131 @@
+@font-face {
+  font-family: "Aloha";
+  src: url("./assets/fonts/Aloha/AlohaMagazine-Thin.otf");
+  font-weight: 100;
+}
+@font-face {
+  font-family: "Aloha";
+  src: url("./assets/fonts/Aloha/AlohaMagazine-Extralight.otf");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Aloha";
+  src: url("./assets/fonts/Aloha/AlohaMagazine-Light.otf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Aloha";
+  src: url("./assets/fonts/Aloha/AlohaMagazine-Regular.otf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Aloha";
+  src: url("./assets/fonts/Aloha/AlohaMagazine-Medium.otf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Aloha";
+  src: url("./assets/fonts/Aloha/AlohaMagazine-Semibold.otf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Aloha";
+  src: url("./assets/fonts/Aloha/AlohaMagazine-Bold.otf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Aloha";
+  src: url("./assets/fonts/Aloha/AlohaMagazine-Extrabold.otf");
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Aloha";
+  src: url("./assets/fonts/Aloha/AlohaMagazine-Black.otf");
+  font-weight: 900;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body::before {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/paper-pattern.png");
+  animation: grain 8s steps(10) infinite;
+  content: "";
+  height: 300%;
+  width: 300%;
+  position: fixed;
+  opacity: 0.2;
+  z-index: -1;
+  top: -100%;
+  left: -50%;
+}
+
+.btn {
+  position: relative;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+
+.btn .line {
+  position: absolute;
+}
+
+.btn .line--one {
+  top: 0;
+  left: 0;
+}
+
+.hero-icon {
+  transform-origin: 50% 50%;
+  animation-name: rotate;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  border-radius: 50%;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes grain {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5%, -10%);
+  }
+  20% {
+    transform: translate(-15%, 5%);
+  }
+  30% {
+    transform: translate(7%, -25%);
+  }
+  40% {
+    transform: translate(-5%, 25%);
+  }
+  50% {
+    transform: translate(-15%, 10%);
+  }
+  60% {
+    transform: translate(15%, 0%);
+  }
+  70% {
+    transform: translate(0%, 15%);
+  }
+  80% {
+    transform: translate(3%, 35%);
+  }
+  90% {
+    transform: translate(-10%, 10%);
+  }
+}
