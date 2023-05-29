@@ -4,7 +4,8 @@ export const projects = [
     {
         id: uuidv4(),
         additionalClassNames: "col-start-1 col-end-3",
-        title: "Oli Crossland Portfolio",
+        title: "Oli Crossland Portfolio (WIP)",
+        href: "https://olicrossland.com",
         categories: ["Development", "UI/UX Design"],
         tech: ["Figma", "GSAP", "Framer Motion", "React", "SCSS"],
         img: {
@@ -16,6 +17,7 @@ export const projects = [
         id: uuidv4(),
         additionalClassNames: "h-fill max-h-[574px]",
         title: "StoreMaxx",
+        href: "https://staging.storemaxx.co.uk",
         categories: ["UI/UX Design", "Development"],
         tech: ["Wordpress", "PHP", "ACF", "Twig", "Figma"],
         img: {
@@ -27,6 +29,7 @@ export const projects = [
         id: uuidv4(),
         additionalClassNames: "h-fill max-h-[574px]",
         title: "Fundamentals",
+        href: "https://fundamentals.tech/products/application-data-hub-adh/",
         categories: ["Development"],
         tech: ["Wordpress", "PHP", "ACF", "Twig", "GSAP"],
         img: {
@@ -38,6 +41,7 @@ export const projects = [
         id: uuidv4(),
         additionalClassNames: "h-fill max-h-[574px]",
         title: "ECF",
+        href: "",
         categories: ["Design"],
         tech: ["Figma"],
         img: {
@@ -49,6 +53,7 @@ export const projects = [
         id: uuidv4(),
         additionalClassNames: "h-fill max-h-[574px]",
         title: "Luna9",
+        href: "https://luna9.vercel.app",
         categories: ["Development"],
         tech: ["Vanilla JS", "GSAP", "SCSS"],
         img: {
