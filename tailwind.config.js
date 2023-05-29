@@ -10,7 +10,8 @@ export default {
         'aloha': ['Aloha', 'sans-serif']
       },
       zIndex: {
-        "negative": -1
+        "negative": -1,
+        "max": 1000
       }
     },
   },
