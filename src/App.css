@@ -126,19 +126,6 @@ html.has-scroll-dragging {
   @apply mx-auto;
 }
 
-@media screen and (max-width: 640px) {
-  .container {
-    width: 90% !important;
-  }
-  .hero-text-line {
-    text-align: center !important;
-  }
-  .hero-text-line > div {
-    display: flex !important;
-    flex-direction: column !important;
-  }
-}
-
 body::before {
   background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/paper-pattern.png");
   animation: grain 8s steps(10) infinite;
@@ -172,6 +159,48 @@ body::before {
 .category--active {
   @apply bg-accent;
 }
+
+.available-for-hire-icon {
+  display: none;
+  position: absolute;
+  top: 100px;
+  right: 100px;
+  z-index: -1;
+}
+
+.available-for-hire-icon svg {
+  animation-name: rotate;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  /* animation-duration: infinite; */
+  width: 70%;
+}
+
+@media screen and (min-width: 768px) {
+  .available-for-hire-icon {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .available-for-hire-icon {
+    top: 80px;
+    right: 50px;
+  }
+}
+
+@media screen and (min-width: 1536px) {
+  .available-for-hire-icon {
+    top: 125px;
+    right: 150px;
+  }
+
+  .available-for-hire-icon svg {
+    width: 80%;
+  }
+}
+
 
 .hero-text-line > div {
   /* border-bottom: 2px solid #e1e1e1; */
@@ -312,6 +341,19 @@ body::before {
   transform: scale(1) translate(-50%, -50%);
   background-color: #f9f9f9;
 } */
+
+@media screen and (max-width: 640px) {
+  .container {
+    width: 90% !important;
+  }
+  .hero-text-line {
+    text-align: center !important;
+  }
+  .hero-text-line > div {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+}
 
 @keyframes rotate {
   from {

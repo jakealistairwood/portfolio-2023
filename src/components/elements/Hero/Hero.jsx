@@ -4,6 +4,7 @@ import { ReactComponent as CircleIcon } from "../../../assets/images/decor-circl
 import { ReactComponent as ArrowDown } from "../../../assets/images/arrow-down.svg";
 import { ReactComponent as SquareIcon } from "../../../assets/images/decor-square.svg";
 import { ReactComponent as GlobeIcon } from "../../../assets/images/globe.svg";
+import { ReactComponent as AvailableForHireIcon } from "../../../assets/images/available-for-hire.svg";
 
 // Package Imports
 import SplitType from "split-type";
@@ -62,7 +63,7 @@ const Hero = () => {
     }, []);
 
     return <section className="hero relative" data-scroll-section ref={heroRef}>
-        <div className="container min-h-screen mx-auto flex flex-col pt-20 sm:pt-40">
+        <div className="container min-h-screen mx-auto flex flex-col pt-20 lg:pt-40 2xl:pt-64">
             <h1 className="font-aloha font-thin text-[5.25rem] sm:text-[11.25rem] w-full leading-tight overflow-hidden" ref={heroText}>
                 <div ref={topLine}>Creative Developer</div>
                 <div className="flex items-center" style={{ display: "flex !important", justifyContent: "space-between !important" }} ref={bottomLine}>
@@ -98,6 +99,9 @@ const Hero = () => {
             </footer>
         </div>
         <div className="square" ref={squareRef}></div>
+        <div className="available-for-hire-icon">
+            <AvailableForHireIcon />
+        </div>
     </section>
 }
 
