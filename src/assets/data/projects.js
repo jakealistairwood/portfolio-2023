@@ -1,6 +1,6 @@
 import { v4 as uuidv4 } from "uuid"
 
-export const projects = [
+export const portfolioProjects = [
     {
         id: uuidv4(),
         additionalClassNames: "col-start-1 col-end-3",
@@ -42,7 +42,7 @@ export const projects = [
         additionalClassNames: "h-fill max-h-[574px]",
         title: "ECF",
         href: "",
-        categories: ["Design"],
+        categories: ["UI/UX Design"],
         tech: ["Figma"],
         img: {
             src: "/images/ecf.png",

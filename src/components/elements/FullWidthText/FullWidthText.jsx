@@ -8,15 +8,15 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const FullWidthText = ({ pageContainer, options }) => {
-    const { links, headerTag, headerText } = options;
+    const { links, headerTag, headerText, sectionName } = options;
 
     
     let containerRef = useRef();
     let headerRef = useRef();
     
     useEffect(() => {
-        let textToSplit = new SplitType(headerRef.current, { types: "lines, chars", lineClass: "text-line" })
-        let chars = gsap.utils.toArray('.char');
+        let textToSplit = new SplitType(headerRef.current, { types: "lines, chars", lineClass: "text-line", charClass: `${sectionName}-char` })
+        let chars = gsap.utils.toArray(`.${sectionName}-char`);
 
         // let splitText = new SplitType(headerRef.current, { types: "lines, chars", lineClass: "text-line" })
         let tl = gsap.timeline({
@@ -29,10 +29,15 @@ const FullWidthText = ({ pageContainer, options }) => {
                 pin: true,
                 pinSpacing: true,
                 scrub: true,
-                onLeaveBack: () => gsap.to("body", { duration: 1, backgroundColor: "#fff" } ),
-                onEnter: () => gsap.to("body", { duration: 1, backgroundColor: "#E9FDB2" }),
-                onEnterBack: () => gsap.to("body", { duration: 0.5, backgroundColor: "#E9FDB2" }),
-                onLeave: () => gsap.to("body", { duration: 1, backgroundColor: "#fff" }),
+                // onLeaveBack: () => gsap.to("body", { duration: 1, backgroundColor: "#fff" } ),
+                // onEnter: () => {
+                //     gsap.to("body", { duration: 0.5, backgroundColor: "#05A5FF" }),
+                // },
+                // onEnterBack: () => {
+                //     gsap.to("body", { duration: 0.5, backgroundColor: "#05A5FF" }),
+                //     gsap.to(headerRef.current, { duration: 0.5, color: "#fff"})
+                // },
+                // onLeave: () => gsap.to("body", { duration: 1, backgroundColor: "#fff" }),
                 onUpdate: self => console.log("progress: ", self.progress)
             }
         }).from(chars, {

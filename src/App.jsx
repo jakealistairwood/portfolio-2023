@@ -16,9 +16,9 @@ import Hero from "./components/elements/Hero/Hero";
 import Portfolio from "./components/elements/Portfolio/Portfolio";
 
 // Data Imports
-import { projects } from "./assets/data/projects";
 import FullWidthText from "./components/elements/FullWidthText/FullWidthText";
-import { overviewHeader } from "./assets/data/textBlocks";
+import { overviewHeader, contactHeader } from "./assets/data/textBlocks";
+import Experiences from "./components/elements/Experiences/Experiences";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -33,10 +33,17 @@ function App() {
             <Navbar scrollY={scrollY} />
             <Hero />
             <FullWidthText pageContainer={pageRef} options={{
+                sectionName: "overview",
                 headerTag: "h2",
                 headerText: overviewHeader
             }} />
             <Portfolio />
+            <Experiences />
+            <FullWidthText options={{
+                sectionName: "contact",
+                headerTag: "h2",
+                headerText: contactHeader
+            }} />
             <div className="grain"></div>
         </main>
     );

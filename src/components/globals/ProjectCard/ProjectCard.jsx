@@ -9,7 +9,7 @@ const ProjectCard = ({ data, index }) => {
     const { img, additionalClassNames, href } = data;
 
     let projectRef = useRef();
-
+    
     // useEffect(() => {
     //     let projects = gsap.utils.toArray(".project");
 

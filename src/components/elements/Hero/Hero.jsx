@@ -62,10 +62,10 @@ const Hero = () => {
     }, []);
 
     return <section className="hero relative" ref={heroRef}>
-        <div className="container min-h-screen mx-auto flex flex-col pt-32">
+        <div className="container min-h-screen mx-auto flex flex-col pt-40">
             <h1 className="font-aloha font-thin text-[11.25rem] w-full leading-tight overflow-hidden" ref={heroText}>
                 <div ref={topLine}>Creative Developer</div>
-                <div className="flex !justify-between" ref={bottomLine}>
+                <div className="flex items-center" style={{ justifyContent: "space-between" }} ref={bottomLine}>
                     <span>&</span>
                     <span>UI Designer</span>
                 </div>
@@ -78,7 +78,7 @@ const Hero = () => {
                         jakealistairwood@gmail.com
                     </a>
                 </div>
-                <a className="flex items-center gap-2 uppercase text-xs border border-black rounded-full py-2 px-4" href="#">
+                <a className="flex items-center gap-2 uppercase text-xs border border-black rounded-full py-2 px-4 scroll-btn" href="#">
                     <div>
                         <CircleIcon />
                     </div>

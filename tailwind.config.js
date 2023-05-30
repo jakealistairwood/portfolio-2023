@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundColor: {
+        'accent': '#D8FF69'
+      },
       fontFamily: {
         'aloha': ['Aloha', 'sans-serif']
       },

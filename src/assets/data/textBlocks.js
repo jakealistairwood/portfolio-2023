@@ -11,3 +11,7 @@ export const overviewHeader = `
         <span class="uppercase font-bold">impact</span>
     </p>
 `
+
+export const contactHeader = `
+    <p>Get in Touch</p>
+`
