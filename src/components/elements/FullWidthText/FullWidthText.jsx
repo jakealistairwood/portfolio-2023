@@ -15,23 +15,30 @@ const FullWidthText = ({ pageContainer, options }) => {
     let headerRef = useRef();
     
     useEffect(() => {
-        // let textToSplit = new SplitType(headerRef.current, { types: "lines", lineClass: "text-line" })
+        let textToSplit = new SplitType(headerRef.current, { types: "lines, chars", lineClass: "text-line" })
+        let chars = gsap.utils.toArray('.char');
 
-        // let splitText = new SplitType(headerRef.current, { types: "lines", lineClass: "text-line" })
+        // let splitText = new SplitType(headerRef.current, { types: "lines, chars", lineClass: "text-line" })
         let tl = gsap.timeline({
             scrollTrigger: {
                 trigger: containerRef.current,
                 start: "top top",
                 // end: "bottom top",
-                end: "+=3000",
+                end: "+=4000",
                 // markers: true,
                 pin: true,
                 pinSpacing: true,
                 scrub: true,
+                onLeaveBack: () => gsap.to("body", { duration: 1, backgroundColor: "#fff" } ),
+                onEnter: () => gsap.to("body", { duration: 1, backgroundColor: "#E9FDB2" }),
+                onEnterBack: () => gsap.to("body", { duration: 0.5, backgroundColor: "#E9FDB2" }),
+                onLeave: () => gsap.to("body", { duration: 1, backgroundColor: "#fff" }),
                 onUpdate: self => console.log("progress: ", self.progress)
             }
-        })
-
+        }).from(chars, {
+            opacity: 0,
+            stagger: 0.2
+        }, 0.5)
         return () => {
             tl.revert();
         }
@@ -39,31 +46,14 @@ const FullWidthText = ({ pageContainer, options }) => {
 
     return <section ref={containerRef}>
         <div className="container flex min-h-screen flex-col justify-center items-center">
-            {headerTag === "h2" && <h2 className="text-center text-[64px] leading-tight font-light" ref={headerRef}>
-                {headerText.map(line => {
-                    return <div key={uuidv4()}>
-                        {line.lineText.map(word => {
-                            if(word.stylingOptions.styledWord) {
-                                return <span className={`${word.stylingOptions.fontFamily === "aloha" ? "font-aloha" : ""}`}> {word.word}</span>
-                            } else {
-                                return <> {word.word}</>
-                            }
-                        })}
-                    </div>
-                })}    
-            </h2>}
-            {headerTag === "h3" && <h3 className="text-center" ref={headerRef}>{headerText}</h3>}
-            {links && <div className="links">
-                {links.map(link => {
-                    return <a href={link.href}>
-                        <div className="text-animate-wrapper flex flex-col">
-                            <span className="opacity-0 width-placeholder">{link.label}</span>
-                            <span className="line line--one">{link.label}</span>
-                            <span className="line line--two">{link.label}</span>
-                        </div>
-                    </a>
-                })}
-            </div>}
+            {headerTag === "h2" && <h2 className="flex flex-col text-center text-[80px] leading-tight font-light" dangerouslySetInnerHTML={{ __html: headerText }} ref={headerRef} />}
+            {links && (
+                <div className="flex items-center gap-5">
+                    {links.map(link => {
+                        return <a href={link.href}>{link.label}</a>
+                    })}
+                </div>
+            )}
         </div>
     </section>
 }

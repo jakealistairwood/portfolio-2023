@@ -18,7 +18,7 @@ import Portfolio from "./components/elements/Portfolio/Portfolio";
 // Data Imports
 import { projects } from "./assets/data/projects";
 import FullWidthText from "./components/elements/FullWidthText/FullWidthText";
-import { renderHeader } from "./assets/data/textBlocks";
+import { overviewHeader } from "./assets/data/textBlocks";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -34,61 +34,7 @@ function App() {
             <Hero />
             <FullWidthText pageContainer={pageRef} options={{
                 headerTag: "h2",
-                headerText: [{
-                    lineText: [{
-                        word: "digital",
-                        stylingOptions: {
-                            styleWord: false,
-                            fontFamily: "default"
-                        }
-                    },{
-                        word: "experiences",
-                        stylingOptions: {
-                            styleWord: false,
-                            fontFamily: "default"
-                        }
-                    }],
-                }, {
-                    lineText: [{
-                        word: "designed",
-                        stylingOptions: {
-                            styledWord: false,
-                            fontFamily: "default"
-                        }
-                    }, {
-                        word: "with",
-                        stylingOptions: {
-                            styledWord: false,
-                            fontFamily: "default"
-                        }
-                    }, {
-                        word: "elegance",
-                        stylingOptions: {
-                            styledWord: true,
-                            fontFamily: "aloha"
-                        }
-                    }]
-                }, {
-                    lineText: [{
-                        word: "built",
-                        stylingOptions: {
-                            styledWord: false,
-                            fontFamily: "default"
-                        }
-                    }, {
-                        word: "to",
-                        stylingOptions: {
-                            styledWord: false,
-                            fontFamily: "default"
-                        }
-                    }, {
-                        word: "impact",
-                        stylingOptions: {
-                            styledWord: true,
-                            fontFamily: "default"
-                        }
-                    }]
-                }]
+                headerText: overviewHeader
             }} />
             <Portfolio />
             <div className="grain"></div>
