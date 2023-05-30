@@ -10,7 +10,7 @@ export const experiences = [
         }
     },
     {
-        role: "Junior Software Engineer Coach",
+        role: "Front-End Developer Coach",
         company: "_nology",
         websiteUrl: "https://nology.io",
         companyLogo: "/images/nology.svg",
