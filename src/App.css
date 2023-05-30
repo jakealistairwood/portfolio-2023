@@ -175,6 +175,46 @@ body::before {
   background-color: #f9f9f9;
 }
 
+.overlay {
+  position: absolute;
+  inset: 0;
+  content: "";
+  transition: background-color 0.3s ease-in-out;
+}
+
+.overlay--visible {
+  background-color: rgba(20, 22, 28, 0.4);
+  backdrop-filter: blur(4px);
+}
+
+.overlay-visible {
+  background-color: transparent;
+}
+
+.project__info {
+  position: absolute;
+  inset: 0;
+  padding: 2rem;
+}
+
+.project__info--hidden {
+  visibility: hidden;
+}
+
+.project__tag {
+  background-color: rgba(13, 24, 34, 0);
+  /* backdrop-filter: blur(4px); */
+  border: 1px solid #ebebeb;
+}
+
+.repo-btn {
+  color: black;
+}
+
+.repo-btn svg path {
+  fill: black;
+  fill-opacity: 0.8
+}
 
 /* .overview {
   position: absolute;

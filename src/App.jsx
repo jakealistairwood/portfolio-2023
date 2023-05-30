@@ -42,7 +42,15 @@ function App() {
             <FullWidthText options={{
                 sectionName: "contact",
                 headerTag: "h2",
-                headerText: contactHeader
+                headerText: contactHeader,
+                links: [
+                    {
+                        label: "Send me a message",
+                        buttonType: "primary",
+                        href: "mailto://jakealistairwood@gmail.com",
+                        openInNewTab: true,
+                    }
+                ]
             }} />
             <div className="grain"></div>
         </main>

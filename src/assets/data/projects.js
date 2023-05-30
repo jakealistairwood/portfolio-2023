@@ -6,6 +6,7 @@ export const portfolioProjects = [
         additionalClassNames: "col-start-1 col-end-3",
         title: "Oli Crossland Portfolio (WIP)",
         href: "https://olicrossland.com",
+        githubRepo: "https://github.com/jakealistairwood/olicrossland-portfolio",
         categories: ["Development", "UI/UX Design"],
         tech: ["Figma", "GSAP", "Framer Motion", "React", "SCSS"],
         img: {
@@ -18,6 +19,7 @@ export const portfolioProjects = [
         additionalClassNames: "h-fill max-h-[574px]",
         title: "StoreMaxx",
         href: "https://staging.storemaxx.co.uk",
+        githubRepo: "",
         categories: ["UI/UX Design", "Development"],
         tech: ["Wordpress", "PHP", "ACF", "Twig", "Figma"],
         img: {
@@ -29,6 +31,7 @@ export const portfolioProjects = [
         id: uuidv4(),
         additionalClassNames: "h-fill max-h-[574px]",
         title: "Fundamentals",
+        githubRepo: "",
         href: "https://fundamentals.tech/products/application-data-hub-adh/",
         categories: ["Development"],
         tech: ["Wordpress", "PHP", "ACF", "Twig", "GSAP"],
@@ -53,6 +56,7 @@ export const portfolioProjects = [
         id: uuidv4(),
         additionalClassNames: "h-fill max-h-[574px]",
         title: "Luna9",
+        githubRepo: "https://github.com/jakealistairwood/Luna9",
         href: "https://luna9.vercel.app",
         categories: ["Development"],
         tech: ["Vanilla JS", "GSAP", "SCSS"],

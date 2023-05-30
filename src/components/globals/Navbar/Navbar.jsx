@@ -5,9 +5,10 @@ const Navbar = ({ scrollY, navbarEl }) => {
 
   return <nav className="navbar fixed top-0 z-max w-[100%]" ref={navbarEl}>
         <div className={`container py-3 mt-3 px-5 mx-auto flex justify-between items-center relative ${scrollY > 100 ? "navbar--active" : ""}`}>
-            <a className="navbar__logo uppercase font-bold absolute left-1/2 -translate-x-1/2" href="#">Jake Alistair Wood</a>
+            <a className="navbar__logo uppercase font-bold static sm:absolute sm:left-1/2 sm:-translate-x-1/2" href="#">Jake Alistair Wood</a>
+            <button className="uppercase sm:hidden">Menu</button>
             {navLinks.map(menu => {
-                return <ul key={uuidv4()} className="navbar__nav-links flex justify-between items-center gap-5 uppercase text-xs">
+                return <ul key={uuidv4()} className="navbar__nav-links hidden sm:flex justify-between items-center gap-5 uppercase text-xs">
                     {menu.links.map(link => {
                         return <li key={uuidv4()} className={`navbar__nav-link ${link.isButton && "btn border border-black rounded-full py-2 px-4"}`}>
                             <a href={link.href} className="flex flex-col relative text-animate-wrapper" target={`${link.openInNewTab ? "_blank" : "_self"}`}>
