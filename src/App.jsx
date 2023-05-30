@@ -18,6 +18,7 @@ import Portfolio from "./components/elements/Portfolio/Portfolio";
 // Data Imports
 import { projects } from "./assets/data/projects";
 import FullWidthText from "./components/elements/FullWidthText/FullWidthText";
+import { renderHeader } from "./assets/data/textBlocks";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -31,7 +32,7 @@ function App() {
         <main className="page-wrapper mx-auto" ref={pageRef}>
             <Navbar scrollY={scrollY} />
             <Hero />
-            <FullWidthText options={{
+            <FullWidthText pageContainer={pageRef} options={{
                 headerTag: "h2",
                 headerText: [{
                     lineText: [{

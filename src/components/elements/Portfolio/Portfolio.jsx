@@ -10,7 +10,7 @@ const Portfolio = () => {
             <h3 className="font-aloha text-9xl font-thin text-center pb-12">
                 Selected Works
             </h3>
-            <div className="portfolio__container grid grid-cols-2 gap-5">
+            <div className="portfolio__container grid grid-cols-1 sm:grid-cols-2 gap-5">
                 {projects.map((project, index) => {
                     return <ProjectCard key={uuidv4()} data={project} index={index} />
                 })}

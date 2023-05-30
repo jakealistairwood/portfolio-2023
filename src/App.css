@@ -80,6 +80,11 @@ body::before {
   border-bottom: 10px solid #000;
 }
 
+.hero-text-line {
+  border-bottom: 2px solid #e1e1e1;
+  width: 100%;
+}
+
 .btn {
   background-color: transparent;
   cursor: pointer;
@@ -139,6 +144,11 @@ body::before {
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   border-radius: 50%;
+}
+
+.project:hover .project__img {
+  transition: transform 0.3s ease-in-out;
+  transform: scale(1.05)
 }
 
 /* .square {
