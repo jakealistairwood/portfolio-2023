@@ -57,7 +57,7 @@ const FullWidthText = ({ pageContainer, options }) => {
 
     return <section ref={containerRef}>
         <div className="container flex min-h-screen flex-col gap-10 justify-center items-center">
-            {headerTag === "h2" && <h2 className="flex flex-col text-center text-[80px] leading-tight font-light" dangerouslySetInnerHTML={{ __html: headerText }} ref={headerRef} />}
+            {headerTag === "h2" && <h2 className="flex flex-col text-center text-[2rem] sm:text-[80px] leading-tight font-light" dangerouslySetInnerHTML={{ __html: headerText }} ref={headerRef} />}
             {links && (
                 <div className="flex items-center gap-5">
                     {links.map(link => {

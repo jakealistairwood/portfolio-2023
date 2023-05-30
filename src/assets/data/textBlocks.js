@@ -2,7 +2,7 @@ export const overviewHeader = `
     <p>digital experiences</p>
     <p>
         designed with ${" "}
-        <span class="font-aloha font-regular text-[110px] tracking-wider">
+        <span class="font-aloha font-regular text-[2rem] sm:text-[110px] tracking-wider">
             elegance
         </span>
     </p>

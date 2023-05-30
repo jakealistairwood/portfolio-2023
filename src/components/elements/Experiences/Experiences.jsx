@@ -11,12 +11,12 @@ const Experiences = () => {
                 {experiences.map(experience => {
                     return <li className="experience flex flex-col py-8 border-solid border-b-2 border-gray-200">
                         <button className="flex items-center">
-                            <div class="table table-fixed w-full ...">
-                                <div class="table-row-group">
-                                    <div class="table-row uppercase text-sm">
-                                        <div class="table-cell ... text-left">{experience.role}</div>
-                                        <div class="table-cell ... text-left font-bold">{experience.company}</div>
-                                        <div class="table-cell ... text-right">{experience.dates.start} - {experience.dates.end}</div>
+                            <div class="block sm:table table-fixed w-full ...">
+                                <div class="sm:table-row-group">
+                                    <div class="flex flex-col gap-2 sm:table-row uppercase text-sm">
+                                        <div class="sm:table-cell ... text-left">{experience.role}</div>
+                                        <div class="sm:table-cell ... text-left font-bold">{experience.company}</div>
+                                        <div class="sm:table-cell ... text-left sm:text-right">{experience.dates.start} - {experience.dates.end}</div>
                                     </div>
                                 </div>
                             </div>

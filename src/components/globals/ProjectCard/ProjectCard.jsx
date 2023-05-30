@@ -40,17 +40,17 @@ const ProjectCard = ({ data, index }) => {
         </div>
         <div className={`overlay ${projectHoverActive ? "overlay--visible" : "overlay--hidden"}`}></div>
         <div className={`project__info flex flex-col gap-5 justify-end ${projectHoverActive ? "project__info--visible" : "project__info--hidden"} text-white`}>
-            <h5 className="flex gap-4 uppercase text-2xl font-light">
+            <h5 className="flex gap-4 uppercase text-sm sm:text-2xl font-light">
                 {categories.map(category => {
                     return <span>{category}</span>
                 })}
             </h5>            
             <div className="mt-auto flex flex-col gap-4">
-                <h4 className="text-6xl font-light">{title}</h4>
-                <div className="flex items-center justify-between">
-                    <ul className="project__tags flex gap-2">
+                <h4 className="text-2xl sm:text-6xl font-light">{title}</h4>
+                <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
+                    <ul className="project__tags flex flex-wrap gap-2">
                         {tech.map(skill => {
-                            return <li className="project__tag rounded-full uppercase text-xs font-light py-2 px-4">
+                            return <li className="project__tag rounded-full uppercase text-[8px] font-light py-2 px-4">
                                 {skill}
                             </li>
                         })}

@@ -20,12 +20,12 @@ export const navLinks = [
                 isButton: false,
                 openInNewTab: false,
             },
-            {
-                label: "Blog",
-                href: "",
-                isButton: false,
-                openInNewTab: false,
-            }
+            // {
+            //     label: "Blog",
+            //     href: "",
+            //     isButton: false,
+            //     openInNewTab: false,
+            // }
         ]
     },
     {
@@ -33,7 +33,7 @@ export const navLinks = [
         links: [
             {
                 label: "LinkedIn",
-                href: "",
+                href: "https://www.linkedin.com/in/jake-wood-726141114/",
                 isButton: false,
                 openInNewTab: true,
             },

@@ -6,6 +6,6 @@ import svgr from "vite-plugin-svgr"
 export default defineConfig({
   plugins: [react(), svgr()],
   optimizeDeps: {
-    exclude: ['deps_temp_c817179d', 'gsap']
+    exclude: ['deps_temp_c817179d', 'js-big-decimal', 'gsap', 'tslib']
   }
 })

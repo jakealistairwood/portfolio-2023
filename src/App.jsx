@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import { useWindowScrollPositions } from "./assets/hooks/useWindowScrollPosition";
+import { ScrollTriggerProxy } from "./assets/hooks/useLocomotiveScroll";
 
 // Styling
 import "./App.css";
@@ -9,6 +10,8 @@ import SplitType from "split-type";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { v4 as uuidv4 } from "uuid";
+// import LocomotiveScroll from "locomotive-scroll";
+import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 
 // Component Imports
 import Navbar from "./components/globals/Navbar/Navbar";
@@ -28,8 +31,12 @@ function App() {
     // Element References
     let pageRef = useRef();
 
+    useEffect(() => {
+        // useLocomotiveScroll(pageRef.current)
+    }, []);
+
     return (
-        <main className="page-wrapper mx-auto" ref={pageRef}>
+        <main className="page-wrapper mx-auto" data-scroll-container ref={pageRef}>
             <Navbar scrollY={scrollY} />
             <Hero />
             <FullWidthText pageContainer={pageRef} options={{

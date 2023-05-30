@@ -33,14 +33,14 @@ const Portfolio = () => {
 
     return <section className="portfolio pb-32">
         <div className="container">
-            <header className="section-header flex pb-12 justify-between items-center">
+            <header className="section-header flex flex-col gap-8 sm:flex-row pb-12 justify-between items-center">
                 <h3 className="text-3xl font-light uppercase">
                     Selected Works
                 </h3>
-                <div className="flex items-center gap-2">
-                    <button onClick={() => setFilteredProjects(portfolioProjects)} className="category category--active px-5 text-sm py-[0.5em] uppercase bg-accent rounded-full">All</button>
+                <div className="flex flex-wrap items-center gap-2">
+                    <button onClick={() => setFilteredProjects(portfolioProjects)} className="category category--active px-5 text-xs sm:text-sm py-[0.5em] uppercase bg-accent rounded-full">All</button>
                     {filteredCategories.map(category => {
-                        return <button onClick={() => filterProjects(category)} className="category px-5 text-sm uppercase py-[0.5em] rounded-full">{category}</button>
+                        return <button onClick={() => filterProjects(category)} className="category px-5 text-xs sm:text-sm uppercase py-[0.5em] rounded-full">{category}</button>
                     })}
                 </div>
             </header>
