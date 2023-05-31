@@ -63,8 +63,8 @@ const Hero = () => {
     }, []);
 
     return <section className="hero relative" ref={heroRef} id="heroSection">
-        <div className="container min-h-screen mx-auto flex flex-col pt-20 lg:pt-40 2xl:pt-64">
-            <h1 className="font-aloha font-thin text-[5.25rem] sm:text-[11.25rem] w-full leading-tight overflow-hidden" ref={heroText}>
+        <div className="container min-h-screen mx-auto flex flex-col pt-20 md:pt-28 lg:pt-40 2xl:pt-64">
+            <h1 className="font-aloha font-thin text-[5.25rem] sm:text-[9.25rem] lg:text-[8rem] 2xl:text-[11.25rem] w-full leading-tight overflow-hidden" ref={heroText}>
                 <div ref={topLine}>Creative Developer</div>
                 <div className="flex items-center" style={{ display: "flex !important", justifyContent: "space-between !important" }} ref={bottomLine}>
                     <span>&</span>

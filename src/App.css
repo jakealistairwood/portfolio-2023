@@ -124,6 +124,8 @@ html.has-scroll-dragging {
 
 .container {
   @apply mx-auto;
+  /* @apply max-w-[1500px]; */
+  max-width: 1440px !important;
 }
 
 html {
@@ -184,6 +186,11 @@ body::before {
 @media screen and (min-width: 768px) {
   .available-for-hire-icon {
     display: block;
+    top: 75px;
+    right: 0;
+  }
+  .available-for-hire-icon svg {
+    width: 60%;
   }
 }
 
@@ -346,7 +353,13 @@ body::before {
   background-color: #f9f9f9;
 } */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1320px) {
+  .container {
+    width: 90% !important;
+  }
+}
+
+@media screen and (max-width: 1024px) {
   .hero-text-line > div {
     display: flex !important;
     flex-direction: column !important;
