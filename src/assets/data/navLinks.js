@@ -4,7 +4,7 @@ export const navLinks = [
         links: [
             {
                 label: "Home",
-                href: "",
+                href: "#heroSection",
                 isButton: false,
                 openInNewTab: false,
             },
@@ -16,7 +16,7 @@ export const navLinks = [
             },
             {
                 label: "Work",
-                href: "",
+                href: "#portfolioSection",
                 isButton: false,
                 openInNewTab: false,
             },

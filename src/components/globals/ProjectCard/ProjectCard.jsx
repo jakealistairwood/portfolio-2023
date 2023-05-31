@@ -34,7 +34,7 @@ const ProjectCard = ({ data, index }) => {
     // }, []);
 
 
-    return <a href={href} className={`project relative bg-[#f9f9f9] flex justify-center items-center overflow-hidden rounded-2xl ${additionalClassNames}`} onMouseEnter={() => setProjectHoverActive(true)} onMouseLeave={() => setProjectHoverActive(false)} ref={projectRef}>
+    return <a href={href} target="_blank" className={`project relative bg-[#f9f9f9] flex justify-center items-center overflow-hidden rounded-2xl ${additionalClassNames}`} onMouseEnter={() => setProjectHoverActive(true)} onMouseLeave={() => setProjectHoverActive(false)} ref={projectRef}>
         <div className="project__img rounded-2xl flex justify-center items-center">
             <img src={img.src} alt={img.alt} />
         </div>

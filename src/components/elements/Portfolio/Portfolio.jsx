@@ -8,6 +8,10 @@ import { v4 as uuidv4 } from "uuid"
 
 import { removeDuplicatedCategories } from "../../../assets/utils/helpers"
 import Filters from "../Filters/Filters"
+import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/all"
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Portfolio = () => {
     const [ projects, setProjects ] = useState(portfolioProjects);
@@ -38,6 +42,7 @@ const Portfolio = () => {
     useEffect(() => {
         setActiveFilter("all");
         setFilteredProjects(portfolioProjects);
+        ScrollTrigger.refresh();
     }, []);
 
     let categories = [...new Set(projects.map(project => {
@@ -46,7 +51,7 @@ const Portfolio = () => {
 
     let filteredCategories = removeDuplicatedCategories(categories);
 
-    return <section className="portfolio pb-32">
+    return <section className="portfolio pb-32" id="portfolioSection">
         <div className="container">
             <header className="section-header flex flex-col gap-8 sm:flex-row pb-12 justify-between items-center">
                 <h3 className="text-3xl font-light uppercase">
