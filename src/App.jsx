@@ -36,7 +36,7 @@ function App() {
     }, []);
 
     return (
-        <main className="page-wrapper mx-auto" data-scroll-container ref={pageRef}>
+        <main className="page-wrapper mx-auto" ref={pageRef}>
             <Navbar scrollY={scrollY} />
             <Hero />
             <FullWidthText pageContainer={pageRef} options={{

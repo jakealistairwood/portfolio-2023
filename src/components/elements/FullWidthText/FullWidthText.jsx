@@ -41,7 +41,6 @@ const FullWidthText = ({ pageContainer, options }) => {
                 //     gsap.to(headerRef.current, { duration: 0.5, color: "#fff"})
                 // },
                 // onLeave: () => gsap.to("body", { duration: 1, backgroundColor: "#fff" }),
-                onUpdate: self => console.log("progress: ", self.progress)
             }
         }).from(chars, {
             opacity: 0,

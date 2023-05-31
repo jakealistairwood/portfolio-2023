@@ -14,9 +14,9 @@ const ProjectCard = ({ data, index }) => {
 
     let projectRef = useRef();
 
-    useEffect(() => {
-        console.log(projectRef);
-    }, []);
+    // useEffect(() => {
+    //     console.log(projectRef);
+    // }, []);
 
     // useEffect(() => {
     //     let projects = gsap.utils.toArray(".project");
@@ -50,7 +50,7 @@ const ProjectCard = ({ data, index }) => {
                 <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
                     <ul className="project__tags flex flex-wrap gap-2">
                         {tech.map(skill => {
-                            return <li className="project__tag rounded-full uppercase text-[8px] font-light py-2 px-4">
+                            return <li className="project__tag rounded-full uppercase text-[8px] sm:text-xs font-light py-2 px-4">
                                 {skill}
                             </li>
                         })}

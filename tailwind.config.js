@@ -15,6 +15,9 @@ export default {
       zIndex: {
         "negative": -1,
         "max": 1000
+      },
+      screens: {
+        'xxl': '1980'
       }
     },
   },

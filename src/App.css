@@ -342,6 +342,14 @@ body::before {
   background-color: #f9f9f9;
 } */
 
+@media screen and (max-width: 768px) {
+  .hero-text-line > div {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+}
+
 @media screen and (max-width: 640px) {
   .container {
     width: 90% !important;
@@ -350,8 +358,7 @@ body::before {
     text-align: center !important;
   }
   .hero-text-line > div {
-    display: flex !important;
-    flex-direction: column !important;
+    align-items: center !important;
   }
 }
 

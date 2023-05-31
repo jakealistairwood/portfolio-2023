@@ -7,20 +7,36 @@ import ProjectCard from "../../globals/ProjectCard/ProjectCard"
 import { v4 as uuidv4 } from "uuid"
 
 import { removeDuplicatedCategories } from "../../../assets/utils/helpers"
+import Filters from "../Filters/Filters"
 
 const Portfolio = () => {
     const [ projects, setProjects ] = useState(portfolioProjects);
     const [ filteredProjects, setFilteredProjects ] = useState([]);
+    const [ activeFilter, setActiveFilter ] = useState("all");
 
     const filterProjects = (categoryName) => {
-        let categorisedProjects = filteredProjects.filter(project => {
-            return project.categories.includes(categoryName);
-        });
-        console.log(categorisedProjects);
-        setFilteredProjects(categorisedProjects);
+        setActiveFilter(categoryName);
+        console.log(categoryName);
+        if(categoryName == "all") {
+            setFilteredProjects(portfolioProjects);
+        } else {
+            setFilteredProjects([...portfolioProjects].filter(project => {
+                return project.categories.includes(categoryName)
+            }));
+        }
+        // setFilteredProjects(portfolioProjects)
+        // console.log(categoryName);
+        // let categorisedProjects = filteredProjects.filter(project => {
+        //     let p = project.categories.includes(categoryName);
+        //     console.log(p);
+        //     return project.categories.includes(categoryName);
+        // });
+        // console.log(categorisedProjects);
+        // setFilteredProjects(categorisedProjects);
     }
 
     useEffect(() => {
+        setActiveFilter("all");
         setFilteredProjects(portfolioProjects);
     }, []);
 
@@ -29,7 +45,6 @@ const Portfolio = () => {
     }))].flat(1);
 
     let filteredCategories = removeDuplicatedCategories(categories);
-    console.log(filteredCategories);
 
     return <section className="portfolio pb-32">
         <div className="container">
@@ -37,12 +52,7 @@ const Portfolio = () => {
                 <h3 className="text-3xl font-light uppercase">
                     Selected Works
                 </h3>
-                <div className="flex flex-wrap items-center gap-2">
-                    <button onClick={() => setFilteredProjects(portfolioProjects)} className="category category--active px-5 text-xs sm:text-sm py-[0.5em] uppercase bg-accent rounded-full">All</button>
-                    {filteredCategories.map(category => {
-                        return <button onClick={() => filterProjects(category)} className="category px-5 text-xs sm:text-sm uppercase py-[0.5em] rounded-full">{category}</button>
-                    })}
-                </div>
+                <Filters categories={filteredCategories} filterProjects={filterProjects} activeFilter={activeFilter} />
             </header>
             <div className="portfolio__container grid grid-cols-1 sm:grid-cols-2 gap-5">
                 {filteredProjects.map((project, index) => {

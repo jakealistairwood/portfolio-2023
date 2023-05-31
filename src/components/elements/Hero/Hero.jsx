@@ -62,7 +62,7 @@ const Hero = () => {
 
     }, []);
 
-    return <section className="hero relative" data-scroll-section ref={heroRef}>
+    return <section className="hero relative" ref={heroRef}>
         <div className="container min-h-screen mx-auto flex flex-col pt-20 lg:pt-40 2xl:pt-64">
             <h1 className="font-aloha font-thin text-[5.25rem] sm:text-[11.25rem] w-full leading-tight overflow-hidden" ref={heroText}>
                 <div ref={topLine}>Creative Developer</div>
