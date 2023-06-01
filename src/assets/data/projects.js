@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from "uuid"
 export const portfolioProjects = [
     {
         id: uuidv4(),
-        additionalClassNames: "h-fill max-h-[574px]",
+        additionalClassNames: "col-start-1 sm:col-end-3",
         title: "StoreMaxx",
         href: "https://staging.storemaxx.co.uk",
         githubRepo: "",
@@ -16,7 +16,7 @@ export const portfolioProjects = [
     },
     {
         id: uuidv4(),
-        additionalClassNames: "col-start-1 sm:col-end-3",
+        additionalClassNames: "h-fill max-h-[574px]",
         title: "Oli Crossland Portfolio (WIP)",
         href: "https://olicrossland.com",
         githubRepo: "https://github.com/jakealistairwood/olicrossland-portfolio",
