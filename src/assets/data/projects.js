@@ -3,19 +3,6 @@ import { v4 as uuidv4 } from "uuid"
 export const portfolioProjects = [
     {
         id: uuidv4(),
-        additionalClassNames: "col-start-1 sm:col-end-3",
-        title: "Oli Crossland Portfolio (WIP)",
-        href: "https://olicrossland.com",
-        githubRepo: "https://github.com/jakealistairwood/olicrossland-portfolio",
-        categories: ["Development", "UI/UX Design"],
-        tech: ["Figma", "GSAP", "Framer Motion", "React", "SCSS"],
-        img: {
-            src: "/images/olicrossland-portfolio.png",
-            alt: "Oli Crossland Portfolio presentation thumbnail",
-        }
-    },
-    {
-        id: uuidv4(),
         additionalClassNames: "h-fill max-h-[574px]",
         title: "StoreMaxx",
         href: "https://staging.storemaxx.co.uk",
@@ -25,6 +12,19 @@ export const portfolioProjects = [
         img: {
             src: "/images/storemaxx.png",
             alt: "Storemaxx presentation thumbnail",
+        }
+    },
+    {
+        id: uuidv4(),
+        additionalClassNames: "col-start-1 sm:col-end-3",
+        title: "Oli Crossland Portfolio (WIP)",
+        href: "https://olicrossland.com",
+        githubRepo: "https://github.com/jakealistairwood/olicrossland-portfolio",
+        categories: ["Development", "UI/UX Design"],
+        tech: ["Figma", "GSAP", "Framer Motion", "React", "SCSS"],
+        img: {
+            src: "/images/olicrossland-portfolio.png",
+            alt: "Oli Crossland Portfolio presentation thumbnail",
         }
     },
     {
@@ -65,4 +65,16 @@ export const portfolioProjects = [
             alt: "Luna9 presentation thumbnail",
         }
     },
+    {
+        id: uuidv4(),
+        additionalClassNames: "h-fill max-h-[574px]",
+        title: "Todo App (Frontend Mentor Challenge)",
+        githubRepo: "https://github.com/jakealistairwood/fm-todo-redux",
+        href: "https://fm-todo-redux.vercel.app/",
+        categories: ["Development"],
+        tech: ["React", "Styled Components", "Redux"],
+        img: {
+            src: "/images/todo.png",
+            alt: "Todo App presentation thumbnail"
+        }
 ];
