@@ -16,7 +16,7 @@ export const navLinks = [
             },
             {
                 label: "Work",
-                href: "#portfolioSection",
+                href: "/portfolio",
                 isButton: false,
                 openInNewTab: false,
             },

@@ -6,7 +6,7 @@ import ProjectCard from "../../globals/ProjectCard/ProjectCard"
 // Package Imports
 import { v4 as uuidv4 } from "uuid"
 
-import { removeDuplicatedCategories } from "../../../assets/utils/helpers"
+import { removeDuplicatedCategories, flattenCategories } from "../../../assets/utils/helpers"
 import Filters from "../Filters/Filters"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/all"
@@ -45,9 +45,7 @@ const Portfolio = () => {
         ScrollTrigger.refresh();
     }, []);
 
-    let categories = [...new Set(projects.map(project => {
-        return project.categories;
-    }))].flat(1);
+    let categories = flattenCategories(projects);
 
     let filteredCategories = removeDuplicatedCategories(categories);
 
@@ -63,6 +61,13 @@ const Portfolio = () => {
                 {filteredProjects.map((project, index) => {
                     return <ProjectCard key={uuidv4()} data={project} index={index} />
                 })}
+                <div className="project h-fill max-h-[574px] bg-[#f9f9f9] rounded-2xl flex justify-center items-center">
+                    <a href="#" className="flex flex-col relative text-animate-wrapper">
+                        <span className="block opacity-0 width-placeholder">View all projects</span>
+                        <span className="block absolute line line--one">View all projects</span>
+                        <span className="block absolute line line--two">View all projects</span>
+                    </a>
+                </div>
             </div>
         </div>
     </section>

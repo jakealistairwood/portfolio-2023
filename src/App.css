@@ -343,6 +343,26 @@ body::before {
   fill-opacity: 0.8
 }
 
+.portfolio__projects .project:nth-child(1) {
+  grid-column: unset;
+}
+
+.portfolio__projects .project {
+  max-height: 300px;
+}
+
+.portfolio__projects .project__info h4 {
+  @apply text-4xl;
+}
+
+.portfolio__projects .project__info h5 {
+  @apply text-lg;
+}
+.portfolio__projects .project__info .project__tag,
+.portfolio__projects .project__info .repo-btn {
+  @apply text-[10px];
+}
+
 /* .overview {
   position: absolute;
   width: 100%;
