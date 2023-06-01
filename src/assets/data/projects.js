@@ -77,4 +77,5 @@ export const portfolioProjects = [
             src: "/images/todo.png",
             alt: "Todo App presentation thumbnail"
         }
+    }
 ];
