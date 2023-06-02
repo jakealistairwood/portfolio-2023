@@ -1,5 +1,6 @@
 import { v4 as uuidv4 } from "uuid"
 import { navLinks } from "../../../assets/data/navLinks"
+import { Link } from "react-router-dom"
 
 const Navbar = ({ scrollY, navbarEl }) => {
 
@@ -11,11 +12,16 @@ const Navbar = ({ scrollY, navbarEl }) => {
                 return <ul key={uuidv4()} className="navbar__nav-links hidden sm:flex justify-between items-center gap-5 uppercase text-xs">
                     {menu.links.map(link => {
                         return <li key={uuidv4()} className={`navbar__nav-link ${link.isButton && "btn border border-black rounded-full py-2 px-4"}`}>
-                            <a href={link.href} className="flex flex-col relative text-animate-wrapper" target={`${link.openInNewTab ? "_blank" : "_self"}`}>
+                            {/* <a href={link.href} className="flex flex-col relative text-animate-wrapper" target={`${link.openInNewTab ? "_blank" : "_self"}`}>
                                 <span className="block opacity-0 width-placeholder">{link.label}</span>
                                 <span className="block absolute line line--one">{link.label}</span>
                                 <span className="block absolute line line--two">{link.label}</span>
-                            </a>
+                            </a> */}
+                            <Link to={link.href} className="flex flex-col relative text-animate-wrapper" target={`${link.openInNewTab ? "_blank" : "_self"}`}>
+                                <span className="block opacity-0 width-placeholder">{link.label}</span>
+                                <span className="block absolute line line--one">{link.label}</span>
+                                <span className="block absolute line line--two">{link.label}</span>
+                            </Link>
                         </li>
                     })}
                 </ul>

@@ -11,6 +11,8 @@ import Filters from "../Filters/Filters"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/all"
 
+import { Link } from "react-router-dom"
+
 gsap.registerPlugin(ScrollTrigger);
 
 const Portfolio = () => {
@@ -53,11 +55,11 @@ const Portfolio = () => {
                     return <ProjectCard key={uuidv4()} data={project} index={index} />
                 })}
                 <div className="min-h-[574px] h-fill bg-[#f9f9f9] rounded-2xl flex justify-center items-center">
-                    <a href="/portfolio" className="flex flex-col relative text-animate-wrapper">
+                    <Link to="/portfolio" className="flex flex-col relative text-animate-wrapper">
                         <span className="block opacity-0 width-placeholder">View all projects</span>
                         <span className="block absolute line line--one">View all projects</span>
                         <span className="block absolute line line--two">View all projects</span>
-                    </a>
+                    </Link>
                 </div>
             </div>
         </div>
