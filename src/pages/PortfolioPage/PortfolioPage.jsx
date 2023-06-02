@@ -32,11 +32,11 @@ const PortfolioPage = () => {
     let filteredCategories = removeDuplicatedCategories(categories);
 
     return <main className="container">
-        <header className="section-header flex justify-between items-center">
-            <h1 className="uppercase text-3xl font-light pt-24 pb-16 text-center">Portfolio</h1>
+        <header className="section-header flex justify-between items-center gap-6 flex-wrap pt-24 pb-16 ">
+            <h1 className="uppercase text-3xl font-light">Portfolio</h1>
             <Filters categories={filteredCategories} filterProjects={filterProjects} activeFilter={activeFilter} />
         </header>
-        <div className="portfolio__projects grid grid-cols-3 gap-6 overflow-hidden pb-16">
+        <div className="portfolio__projects grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 overflow-hidden pb-16">
             {filteredProjects.map(project => {
                 return <ProjectCard data={project} />
             })}

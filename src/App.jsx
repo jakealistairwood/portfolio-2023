@@ -33,6 +33,7 @@ function App() {
 
     useEffect(() => {
         // useLocomotiveScroll(pageRef.current)
+        ScrollTrigger.refresh();
     }, []);
 
     return (
