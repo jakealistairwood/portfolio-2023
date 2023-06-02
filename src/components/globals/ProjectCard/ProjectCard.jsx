@@ -3,6 +3,8 @@ import { useRef, useEffect, useState } from "react"
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
+import { v4 as uuidv4 } from "uuid"
+
 import { ReactComponent as GithubIcon } from "../../../assets/images/github.svg";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -33,7 +35,6 @@ const ProjectCard = ({ data, index }) => {
     //     })
     // }, []);
 
-
     return <a href={href} target="_blank" className={`project relative bg-[#f9f9f9] flex justify-center items-center overflow-hidden rounded-2xl ${additionalClassNames}`} onMouseEnter={() => setProjectHoverActive(true)} onMouseLeave={() => setProjectHoverActive(false)} ref={projectRef}>
         <div className="project__img rounded-2xl flex justify-center items-center">
             <img src={img.src} alt={img.alt} />
@@ -42,7 +43,7 @@ const ProjectCard = ({ data, index }) => {
         <div className={`project__info flex flex-col gap-5 justify-end ${projectHoverActive ? "project__info--visible" : "project__info--hidden"} text-white`}>
             <h5 className="flex gap-4 uppercase text-sm sm:text-2xl font-light">
                 {categories.map(category => {
-                    return <span>{category}</span>
+                    return <span key={uuidv4()}>{category}</span>
                 })}
             </h5>            
             <div className="mt-auto flex flex-col gap-4">
@@ -50,7 +51,7 @@ const ProjectCard = ({ data, index }) => {
                 <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
                     <ul className="project__tags flex flex-wrap gap-2">
                         {tech.map(skill => {
-                            return <li className="project__tag rounded-full uppercase text-[8px] sm:text-xs font-light py-2 px-4">
+                            return <li key={uuidv4()} className="project__tag rounded-full uppercase text-[8px] sm:text-xs font-light py-2 px-4">
                                 {skill}
                             </li>
                         })}

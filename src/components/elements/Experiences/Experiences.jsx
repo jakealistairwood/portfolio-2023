@@ -1,4 +1,5 @@
 import { experiences } from "../../../assets/data/experiences";
+import { v4 as uuidv4 } from "uuid" 
 
 const Experiences = () => {
     return <section className="experiences">
@@ -9,7 +10,7 @@ const Experiences = () => {
             </header>
             <ul className="experience-list">
                 {experiences.map(experience => {
-                    return <li className="experience flex flex-col py-8 border-solid border-b-2 border-gray-200">
+                    return <li key={uuidv4()} className="experience flex flex-col py-8 border-solid border-b-2 border-gray-200">
                         <button className="flex items-center">
                             <div class="block sm:table table-fixed w-full ...">
                                 <div class="sm:table-row-group">

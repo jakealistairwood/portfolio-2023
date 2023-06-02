@@ -3,6 +3,9 @@ import { portfolioProjects } from "../../assets/data/projects"
 import ProjectCard from "../../components/globals/ProjectCard/ProjectCard"
 import Filters from "../../components/elements/Filters/Filters";
 
+import { gsap } from "gsap";
+import { v4 as uuidv4 } from "uuid"
+
 import { flattenCategories, removeDuplicatedCategories } from "../../assets/utils/helpers";
 
 const PortfolioPage = () => {
@@ -25,6 +28,8 @@ const PortfolioPage = () => {
     useEffect(() => {
         setActiveFilter("all");
         setFilteredProjects(portfolioProjects);
+
+        console.log(projects);
     }, []);
 
     let categories = flattenCategories(projects);
@@ -38,7 +43,7 @@ const PortfolioPage = () => {
         </header>
         <div className="portfolio__projects grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 overflow-hidden pb-16">
             {filteredProjects.map(project => {
-                return <ProjectCard data={project} />
+                return <ProjectCard key={uuidv4()} data={project} />
             })}
         </div>
     </main>

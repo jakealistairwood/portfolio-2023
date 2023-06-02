@@ -60,7 +60,7 @@ const FullWidthText = ({ pageContainer, options }) => {
             {links && (
                 <div className="flex items-center gap-5">
                     {links.map(link => {
-                        return <a className={`flex py-4 px-8 bg-black border-solid border-2 border-black flex-col items-center justify-center rounded-full btn-${sectionName} btn-${sectionName}--${link.buttonType}`} href={link.href} target={`${link.openInNewTab ? "_blank" : "_self"}`}>
+                        return <a key={uuidv4()} className={`flex py-4 px-8 bg-black border-solid border-2 border-black flex-col items-center justify-center rounded-full btn-${sectionName} btn-${sectionName}--${link.buttonType}`} href={link.href} target={`${link.openInNewTab ? "_blank" : "_self"}`}>
                             <div className="relative text-animate-wrapper text-white flex flex-col overflow-hidden">
                                 <span className="block opacity-0 width-placeholder">{link.label}</span>
                                 <span className="block absolute line line--one">{link.label}</span>
