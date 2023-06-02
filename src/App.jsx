@@ -37,7 +37,7 @@ function App() {
 
     return (
         <main className="page-wrapper mx-auto" ref={pageRef}>
-            <Navbar scrollY={scrollY} />
+            {/* <Navbar scrollY={scrollY} /> */}
             <Hero />
             <FullWidthText pageContainer={pageRef} options={{
                 sectionName: "overview",

@@ -68,7 +68,7 @@ export const portfolioProjects = [
     {
         id: uuidv4(),
         additionalClassNames: "h-fill max-h-[574px]",
-        title: "Todo App (Frontend Mentor Challenge)",
+        title: "Todo App (Frontend Mentor)",
         githubRepo: "https://github.com/jakealistairwood/fm-todo-redux",
         href: "https://fm-todo-redux.vercel.app/",
         categories: ["Development"],
