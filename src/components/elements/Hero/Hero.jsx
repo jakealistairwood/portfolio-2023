@@ -79,7 +79,7 @@ const Hero = () => {
                         jakealistairwood@gmail.com
                     </a>
                 </div>
-                <a className="flex items-center gap-2 uppercase text-xs border border-black rounded-full py-2 px-4 scroll-btn" href="#">
+                <a className="flex items-center gap-2 uppercase text-xs border border-black rounded-full py-2 px-4 scroll-btn" href="#overview">
                     <div>
                         <CircleIcon />
                     </div>

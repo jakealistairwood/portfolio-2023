@@ -17,19 +17,6 @@ export const portfolioProjects = [
     {
         id: uuidv4(),
         additionalClassNames: "h-fill max-h-[574px]",
-        title: "Oli Crossland Portfolio (WIP)",
-        href: "https://olicrossland.com",
-        githubRepo: "https://github.com/jakealistairwood/olicrossland-portfolio",
-        categories: ["Development", "UI/UX Design"],
-        tech: ["Figma", "GSAP", "Framer Motion", "React", "SCSS"],
-        img: {
-            src: "/images/olicrossland-portfolio.png",
-            alt: "Oli Crossland Portfolio presentation thumbnail",
-        }
-    },
-    {
-        id: uuidv4(),
-        additionalClassNames: "h-fill max-h-[574px]",
         title: "Fundamentals",
         githubRepo: "",
         href: "https://fundamentals.tech/products/application-data-hub-adh/",
@@ -68,6 +55,19 @@ export const portfolioProjects = [
     {
         id: uuidv4(),
         additionalClassNames: "h-fill max-h-[574px]",
+        title: "Oli Crossland Portfolio (WIP)",
+        href: "https://olicrossland.com",
+        githubRepo: "https://github.com/jakealistairwood/olicrossland-portfolio",
+        categories: ["Development", "UI/UX Design"],
+        tech: ["Figma", "GSAP", "Framer Motion", "React", "SCSS"],
+        img: {
+            src: "/images/olicrossland-portfolio.png",
+            alt: "Oli Crossland Portfolio presentation thumbnail",
+        }
+    },
+    {
+        id: uuidv4(),
+        additionalClassNames: "h-fill max-h-[574px]",
         title: "Todo App (Frontend Mentor)",
         githubRepo: "https://github.com/jakealistairwood/fm-todo-redux",
         href: "https://fm-todo-redux.vercel.app/",
@@ -77,5 +77,44 @@ export const portfolioProjects = [
             src: "/images/todo.png",
             alt: "Todo App presentation thumbnail"
         }
-    }
+    },
+    {
+        id: uuidv4(),
+        additionalClassNames: "h-fill max-h-[574px]",
+        title: "JS Calculator",
+        githubRepo: "https://github.com/jakealistairwood/js-calculator",
+        href: "https://jakealistairwood.github.io/js-calculator/",
+        categories: ["Development"],
+        tech: ["Vanilla JS", "SCSS"],
+        img: {
+            src: "/images/js-calculator.png",
+            alt: "JS Calculator presentation thumbnail"
+        }
+    },
+    {
+        id: uuidv4(),
+        additionalClassNames: "h-fill max-h-[574px]",
+        title: "SaveOom",
+        githubRepo: "",
+        href: "https://www.figma.com/file/CY3lTHFW9t6sZtvsOE97JY/Client-Project---SaveOom?type=design&node-id=1200%3A15591&t=jVaf1ts4ZQuMJzxu-1",
+        categories: ["UI/UX Design"],
+        tech: ["Figma"],
+        img: {
+            src: "/images/saveoom.png",
+            alt: "SaveOom presentation thumbnail"
+        }
+    },
+    {
+        id: uuidv4(),
+        additionalClassNames: "h-fill max-h-[574px]",
+        title: "Lujam",
+        githubRepo: "",
+        href: "https://www.figma.com/file/nNA7MVykoLSwVPJGHG6ylB/Client-Project---Lujam-Portal?type=design&node-id=0%3A1&t=9xQNfQr8IHcVmE9I-1",
+        categories: ["UI/UX Design"],
+        tech: ["Figma"],
+        img: {
+            src: "/images/lujam.png",
+            alt: "Lujam presentation thumbnail"
+        }
+    },
 ];

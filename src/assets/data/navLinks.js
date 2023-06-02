@@ -4,7 +4,7 @@ export const navLinks = [
         links: [
             {
                 label: "Home",
-                href: "#heroSection",
+                href: "/",
                 isButton: false,
                 openInNewTab: false,
             },

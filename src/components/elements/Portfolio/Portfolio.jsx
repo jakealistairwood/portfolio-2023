@@ -22,26 +22,17 @@ const Portfolio = () => {
         setActiveFilter(categoryName);
         console.log(categoryName);
         if(categoryName == "all") {
-            setFilteredProjects(portfolioProjects);
+            setFilteredProjects(portfolioProjects.slice(0, 5));
         } else {
-            setFilteredProjects([...portfolioProjects].filter(project => {
+            setFilteredProjects([...portfolioProjects].slice(0, 5).filter(project => {
                 return project.categories.includes(categoryName)
             }));
         }
-        // setFilteredProjects(portfolioProjects)
-        // console.log(categoryName);
-        // let categorisedProjects = filteredProjects.filter(project => {
-        //     let p = project.categories.includes(categoryName);
-        //     console.log(p);
-        //     return project.categories.includes(categoryName);
-        // });
-        // console.log(categorisedProjects);
-        // setFilteredProjects(categorisedProjects);
     }
 
     useEffect(() => {
         setActiveFilter("all");
-        setFilteredProjects(portfolioProjects);
+        setFilteredProjects([...portfolioProjects].slice(0, 5));
         ScrollTrigger.refresh();
     }, []);
 
@@ -61,8 +52,8 @@ const Portfolio = () => {
                 {filteredProjects.map((project, index) => {
                     return <ProjectCard key={uuidv4()} data={project} index={index} />
                 })}
-                <div className="project h-fill max-h-[574px] bg-[#f9f9f9] rounded-2xl flex justify-center items-center">
-                    <a href="#" className="flex flex-col relative text-animate-wrapper">
+                <div className="min-h-[574px] h-fill bg-[#f9f9f9] rounded-2xl flex justify-center items-center">
+                    <a href="/portfolio" className="flex flex-col relative text-animate-wrapper">
                         <span className="block opacity-0 width-placeholder">View all projects</span>
                         <span className="block absolute line line--one">View all projects</span>
                         <span className="block absolute line line--two">View all projects</span>
