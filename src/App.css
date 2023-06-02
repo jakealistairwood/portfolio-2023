@@ -380,6 +380,29 @@ body::before {
 }
 
 @media screen and (max-width: 1024px) {
+  .mobile-menu {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    position: absolute;
+    @apply top-16;
+    left: 0; 
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 2rem;
+    min-height: 55vh;
+    justify-content: space-between;
+  }
+  .mobile-menu .navbar__nav-link {
+    @apply text-lg;
+  }
+  .mobile-menu--active {
+    height: unset;
+    opacity: 1;
+    visibility: visible;
+  }
   .hero-text-line > div {
     display: flex !important;
     flex-direction: column !important;
