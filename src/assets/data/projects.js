@@ -19,7 +19,7 @@ export const portfolioProjects = [
         additionalClassNames: "h-fill max-h-[574px]",
         title: "Product Feedback Dashboard",
         githubRepo: "https://github.com/jakealistairwood/frontendmentor-product-feedback",
-        href: "https://frontendmentor-product-feedback.vercel.app/suggestions",
+        href: "https://frontendmentor-product-feedback.vercel.app",
         categories: ["Development"],
         tech: ["React", "React Router", "TailwindCSS"],
         img: {
