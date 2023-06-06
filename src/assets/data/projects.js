@@ -17,6 +17,19 @@ export const portfolioProjects = [
     {
         id: uuidv4(),
         additionalClassNames: "h-fill max-h-[574px]",
+        title: "Product Feedback Dashboard",
+        githubRepo: "https://github.com/jakealistairwood/frontendmentor-product-feedback",
+        href: "https://frontendmentor-product-feedback.vercel.app/suggestions",
+        categories: ["Development"],
+        tech: ["React", "React Router", "TailwindCSS"],
+        img: {
+            src: "/images/product-feedback.webp",
+            alt: "Product Feedback presentation thumbnail"
+        }
+    },
+    {
+        id: uuidv4(),
+        additionalClassNames: "h-fill max-h-[574px]",
         title: "Fundamentals",
         githubRepo: "",
         href: "https://fundamentals.tech/products/application-data-hub-adh/",
